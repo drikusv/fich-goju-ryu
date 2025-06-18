@@ -1,5 +1,5 @@
 import { useState } from "react";
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
@@ -9,30 +9,30 @@ export default function ContactUs() {
     message: "",
   });
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "drikusdevelopment@gmail.com", // Your Gmail address
-      pass: "tnsfqywmdphkotsv", // App password (not your Gmail password)
-    },
-  });
+  // const transporter = nodemailer.createTransport({
+  //   service: "gmail",
+  //   auth: {
+  //     user: "drikusdevelopment@gmail.com", // Your Gmail address
+  //     pass: "tnsfqywmdphkotsv", // App password (not your Gmail password)
+  //   },
+  // });
 
-  const mailOptions = {
-    from: formData.email,
-    to: "drikusventer16@gmail.com",
-    subject: "Contact Form Submission",
-    text: `You have received a new message from ${formData.name} (${formData.email}): ${formData.message}`,
-  };
+  // const mailOptions = {
+  //   from: formData.email,
+  //   to: "drikusventer16@gmail.com",
+  //   subject: "Contact Form Submission",
+  //   text: `You have received a new message from ${formData.name} (${formData.email}): ${formData.message}`,
+  // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return console.log(error);
-      }
-      console.log("Email sent: " + info.response);
-      setSubmitted(true);
-    });
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //   if (error) {
+    //     return console.log(error);
+    //   }
+    //   console.log("Email sent: " + info.response);
+    //   setSubmitted(true);
+    // });
   };
 
   return (
