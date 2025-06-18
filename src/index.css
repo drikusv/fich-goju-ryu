@@ -1,3 +1,7 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Custom font for Impact Narrow */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+@layer components {
+  .btn-red {
+    @apply bg-[#de1e2c] text-white font-semibold rounded-full px-6 py-2 shadow transition hover:bg-[#b81a25] focus:outline-none focus:ring-2 focus:ring-[#de1e2c];
+  }
+}
+
+.top-banner-border {
+  border: 2px solid #c79e2a;
 }

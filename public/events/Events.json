@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Kimberly Gasshuku",
+    "date": "2025-06-07",
+    "time": "10:00",
+    "location": "Megracor Museum",
+    "description": "Join us for the Kimberly Gasshuku",
+    "isEvent": true
+  },
+  {
+    "title": "Last Karate Class Before Holidays",
+    "date": "2025-06-25",
+    "time": "17:15",
+    "location": "Fichardtpark Sport Centre",
+    "description": "Final class before the holiday break. No karate classes will be held during the school holidays.",
+    "isEvent": true
+  },
+    {
+    "title": "",
+    "date": "2025-06-30",
+    "time": "",
+    "location": "",
+    "description": "",
+    "isEvent": false
+  },
+  {
+    "title": "Karate Open",
+    "date": "2025-07-23",
+    "time": "17:15",
+    "location": "Fichardtpark Sport Centre",
+    "description": "Karate classes resume after the school holidays. All members are welcome to join.",
+    "isEvent": true
+  },
+  {
+    "title": "Practice for Championships",
+    "date": "2025-08-02",
+    "time": "10:00 AM",
+    "location": "Fichardtpark Sport Centre",
+    "description": "Participation in the upcoming championships is encouraged. This practice session is open to all members.",
+    "isEvent": true
+  }
+]

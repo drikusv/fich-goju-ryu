@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.app-background {
+  min-height: 100vh;
+  width: 100vw;
+  background:
+    linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%),
+    url('/Untitled design.png') right center no-repeat;
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Impact Narrow', Impact, Arial, sans-serif;
+}

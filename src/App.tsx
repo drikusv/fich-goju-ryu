@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TopBanner from "./components/main/TopBanner";
+import RightBackgroundImage from "./components/main/RightBackgroundImage";
+import BodyContent from "./components/main/BodyContent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative max-h-screen">
+      <RightBackgroundImage />
+      <div>
+        <div className="fixed top-0 left-0 w-full h-20 bg-black z-10">
+          <TopBanner />
+          <BodyContent />
+        </div>
+      </div>
+    
     </div>
   );
 }
