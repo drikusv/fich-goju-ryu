@@ -5,7 +5,7 @@ export default function Event() {
   const [events, setEvents] = useState<EventType[]>([]);
 
   useEffect(() => {
-    fetch("/events/events.json")
+    fetch("/events/Events.json")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);

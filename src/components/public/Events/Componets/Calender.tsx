@@ -11,7 +11,7 @@ export default function Calendar() {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
   useEffect(() => {
-    fetch("/events/events.json")
+    fetch("/events/Events.json")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);
