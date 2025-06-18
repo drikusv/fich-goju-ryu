@@ -1,7 +1,40 @@
 import { useState } from "react";
+import nodemailer from "nodemailer";
 
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "drikusdevelopment@gmail.com", // Your Gmail address
+      pass: "tnsfqywmdphkotsv", // App password (not your Gmail password)
+    },
+  });
+
+  const mailOptions = {
+    from: formData.email,
+    to: "drikusventer16@gmail.com",
+    subject: "Contact Form Submission",
+    text: `You have received a new message from ${formData.name} (${formData.email}): ${formData.message}`,
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("Email sent: " + info.response);
+      setSubmitted(true);
+    });
+  };
+
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 text-black">
       <h1 className="font-impact text-4xl md:text-5xl font-bold mb-6 text-center">
@@ -22,27 +55,36 @@ export default function ContactUs() {
         {!submitted ? (
           <form
             className="flex flex-col gap-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSubmitted(true);
-            }}
+            onSubmit={handleSubmit}
           >
             <input
               type="text"
               placeholder="Your Name"
               required
               className="border border-gray-300 rounded px-4 py-2"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
             />
             <input
               type="email"
               placeholder="Your Email"
               required
               className="border border-gray-300 rounded px-4 py-2"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
             <textarea
               placeholder="Your Message"
               required
               className="border border-gray-300 rounded px-4 py-2 min-h-[100px]"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             />
             <button
               type="submit"
