@@ -3,7 +3,7 @@ export default function Home() {
     <div className="max-w-5xl mx-auto px-4 py-12 text-black">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1 text-center lg:text-left">
           <h1 className="font-impact text-5xl md:text-6xl font-bold mb-4 leading-tight">
             Discover Okinawan GoJu Ryu Karate
           </h1>
@@ -23,7 +23,7 @@ export default function Home() {
           <img
             src="/images/OkinawanGoju.png"
             alt="Karate demonstration"
-            className="rounded-2xl shadow-lg w-full max-w-xs md:max-w-[15rem] object-cover"
+            className="rounded-2xl shadow-lg w-full max-w-xs object-cover sm:max-w-[8rem] md:max-w-[12rem] lg:max-w-[13rem] xl:max-w-[16rem] "
           />
         </div>
       </section>

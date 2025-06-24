@@ -68,10 +68,10 @@ export default function Event() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 text-black">
-      <h1 className="font-impact text-4xl md:text-5xl font-bold mb-8 text-center">
+      <h1 className="font-impact text-4xl lg:text-5xl font-bold mb-8 text-center">
         Events
       </h1>
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Right Side: Next Event Details */}
         <div className="flex-1">
           <section className="bg-[#FBF7EF] rounded-xl shadow p-8 h-full flex flex-col justify-center">

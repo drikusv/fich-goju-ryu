@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-black">
-      <h1 className="font-impact text-4xl md:text-5xl font-bold mb-6 text-center">
+      <h1 className="font-impact text-4xl lg:text-5xl font-bold mb-6 text-center">
         About Us
       </h1>
       <section className="bg-white rounded-xl shadow p-8 mb-8">
@@ -46,7 +46,7 @@ export default function About() {
           <li>Authenticity in martial arts</li>
         </ul>
         <h2 className="text-2xl font-bold mb-2">Meet the Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
           {instructors.map((inst, idx) => (
             <div
               key={idx}
